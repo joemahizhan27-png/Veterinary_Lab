@@ -13,13 +13,13 @@ namespace LabSetup
     {
         private const string ScenePath = "Assets/Scenes/Room Scene.unity";
 
-        static RoomBuilder()
-        {
-            EditorApplication.delayCall += () =>
-            {
-                BuildLaboratoryRoom();
-            };
-        }
+        // static RoomBuilder()
+        // {
+        //     EditorApplication.delayCall += () =>
+        //     {
+        //         BuildLaboratoryRoom();
+        //     };
+        // }
 
         [MenuItem("Laboratory/Build Room Shell")]
         public static void BuildLaboratoryRoom()

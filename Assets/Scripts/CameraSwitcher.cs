@@ -18,7 +18,7 @@ namespace LabSetup
 
         [Header("Settings")]
         public int currentCameraIndex = 0;
-        public bool showOnScreenHint = true;
+        public bool showOnScreenHint = false;
 
         private void Awake()
         {
@@ -114,10 +114,10 @@ namespace LabSetup
             boxStyle.fontSize = 14;
             boxStyle.normal.textColor = Color.white;
 
-            Rect rect = new Rect(20, 20, 360, 65);
+            Rect rect = new Rect(Screen.width - 380, 20, 360, 65);
             GUI.Box(rect, GUIContent.none);
 
-            GUILayout.BeginArea(new Rect(30, 26, 340, 55));
+            GUILayout.BeginArea(new Rect(Screen.width - 370, 26, 340, 55));
             GUILayout.Label($"<b>Active Camera ({currentCameraIndex + 1}/{cameras.Count}):</b> {currentCamName}", boxStyle);
             GUILayout.Label("Press <b>[SPACE]</b> to switch perspective", boxStyle);
             GUILayout.EndArea();
